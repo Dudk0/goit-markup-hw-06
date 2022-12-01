@@ -187,28 +187,132 @@
   
   .modal {
     position: absolute;
-    z-index: 999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-  
-    min-height: 581px;
-    min-width: 528px;
-    background-color: #fff;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  min-height: 581px;
+  min-width: 528px;
+  background-color: #fff;
   }
   .close {
-    min-width: 30px;
-    min-height: 30px;
-    padding: 0;
-    border: none;
-    margin-top: 8px;
-    margin-right: 8px;
-    background-color: transparent;
-    background-image: url(../images/img1/close.svg);
+    display: block;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-left: auto;
+  background-color: transparent;
   }
+  .close:focus,
+.close:hover {
+  fill: var(--accent-color);
+}
+.close > .icon {
+  display: block;
+}
+
+.form-field {
+  position: relative;
+  display: block;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 28px;
+}
+.form-field.coment {
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 448px;
+  height: 40px;
+  padding-left: 42px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.form-label {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  font-weight: 400;
+
+  font-size: 12px;
+  line-height: 1.167;
+  letter-spacing: 0.01em;
+
+  color: var(--primary-text-color);
+}
+
+.form-input:focus ~ .icon {
+  fill: var(--accent-color);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.form-field .icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+.coment-input {
+  resize: none;
+  padding: 12px 16px;
+  min-height: 120px;
+}
+
+.modal-text {
+  margin-top: 2px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+
+  color: var(--titel-link-color);
+}
+
+.modal-box {
+  text-align: center;
+}
+.contract {
+  margin-bottom: 30px;
+}
+.contract-link {
+  color: var(--accent-color);
+}
+.contract-field {
+  position: relative;
+}
+.checkbox-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-24px, -50%);
+
+  width: 16px;
+  height: 15px;
+
+  background-color: transparent;
+  border: 2px solid var(--titel-link-color);
+  border-radius: 4px;
+}
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  background-image: url(/images/img1/check.svg);
+  border: transparent;
+  background-size: contain;
+  background-origin: border-box;
+}
   /*hero*/
   .hero {
     padding: 200px 0;
@@ -243,6 +347,7 @@
     border: none;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 0;
     color: var(--primary-bg-color);
     background-color: var(--accent-color);
     font-family: inherit;
@@ -493,6 +598,47 @@
   font-weight: 700;
   line-height: 1.143;
   text-transform: uppercase;
+}
+.submit {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 29px;
+  margin-left: 12px;
+}
+
+.submit-icon {
+  margin: 13px 28px 13px 10px;
+  fill: var(--primary-bg-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit:hover .submit-icon,
+.submit:focus .submit-icon {
+  fill: var(--accent-color);
+}
+.mail-input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color:var(--logo-down-color);
+}
+
+.mail-field {position: relative;
+  
+}
+
+.mail-label {position: absolute;
+top: 50%;
+left: 16px;
+transform: translateY(50%);
+transition: transform  250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mail-input:focus + .mail-label, .mail-input:not(:placeholder-shown) + .mail-label {transform: translateY(60px) scale(1.2);
 }
 
 /*portfolio*/
