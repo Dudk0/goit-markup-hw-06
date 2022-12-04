@@ -343,7 +343,8 @@
     text-transform: uppercase;
   }
   .button {
-    padding: 10px 32px;
+    width: 200px;
+    height: 50px;
     border: none;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
