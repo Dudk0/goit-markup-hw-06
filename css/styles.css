@@ -557,6 +557,10 @@
   .footer-box-links .item:not(:last-child) {
     margin-right: 10px;
   }
+  
+.footer-box-links:last-child {
+  margin-left: auto;
+}
   .footer-box-links .link {
     display: flex;
     align-items: center;
