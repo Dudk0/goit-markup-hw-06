@@ -200,7 +200,7 @@
   background-color: #fff;
   }
   .close {
-    display: block;
+  display: block;
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -209,14 +209,13 @@
   margin-left: auto;
   background-color: transparent;
   }
-  .close:focus,
+.close:focus,
 .close:hover {
   fill: var(--accent-color);
 }
 .close > .icon {
   display: block;
 }
-
 .form-field {
   position: relative;
   display: block;
